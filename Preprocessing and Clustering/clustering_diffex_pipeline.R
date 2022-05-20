@@ -42,7 +42,7 @@ rez = c(0.35, 0.5, 0.75)
 full.combined = sct_mnn(uglia.seurat, regress = c("nCount_RNA", "tech"), num_var_genes = var_genes, resolution = rez, pc_dimensions = PCs, auto_merge = T, conserve.memory = T)
 
 #using top-level cluster assignments, perform subclustering of microglia#
-assigned_idents = read.csv("../intermediate_data/4.5k40_batch_SCTv3_0.5_idents.csv")
+assigned_idents = read.csv("../intermediate_data/top_level_IDs.csv")
 names = assigned_idents[,1]
 assigned_idents = data.frame(assigned_idents[,2])
 row.names(assigned_idents) = names
@@ -75,7 +75,7 @@ uglia_only <- FindNeighbors(uglia_only, reduction = "mnn", dims = 1:pc_dimension
 uglia_only <- FindClusters(uglia_only, resolution = resolution)
 
 #using pre-calculated IDs#
-uglia_idents = read.csv("../intermediate_data/SCT_batch_downsamp_split_0.7_idents.csv")
+uglia_idents = read.csv("../intermediate_data/microglia_IDs.csv")
 names = uglia_idents[,1]
 uglia_idents = data.frame(uglia_idents[,2])
 row.names(uglia_idents) = names
