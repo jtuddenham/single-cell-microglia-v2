@@ -11,3 +11,5 @@ Preprocessing and Clustering: contains scripts and helper functions for clusteri
 Dataset used for label transfer is from:
 Hasselmann J, et al. Development of a Chimeric Model to Study and Manipulate Human Microglia In Vivo. Neuron. 2019 Sep 25;103(6):1016-1033.e10. doi: 10.1016/j.neuron.2019.07.002. Epub 2019 Jul 30. PMID: 31375314; PMCID: PMC7138101.
 Available at: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133432
+
+in situ: contains CellProfiler pipeline used to analyze RNAscope-IF data. 
